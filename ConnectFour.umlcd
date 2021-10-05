@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_1NZe8CYKEeyuAeEDkgMLjw">
+  <modelElement href="ConnectFour.uml#_1FkYoCYKEeyuAeEDkgMLjw"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_2l1RgCYKEeyuAeEDkgMLjw" name="JavaFXTemplate">
+    <modelElement href="ConnectFour.uml#_2AyqwCYKEeyuAeEDkgMLjw"/>
+    <visualProperties xmi:id="_2l1RgSYKEeyuAeEDkgMLjw" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_2l1RgiYKEeyuAeEDkgMLjw" label="+"/>
+    <operations xmi:id="_2l1RgyYKEeyuAeEDkgMLjw" name="main" staticOperation="true">
+      <modelElement href="ConnectFour.uml#_2A5YcCYKEeyuAeEDkgMLjw"/>
+      <visibility xmi:id="_2l1RhCYKEeyuAeEDkgMLjw" label="+"/>
+      <cardinality xmi:id="_2l1RhSYKEeyuAeEDkgMLjw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_2l1RhiYKEeyuAeEDkgMLjw" name="args">
+        <modelElement href="ConnectFour.uml#_2A5_gCYKEeyuAeEDkgMLjw"/>
+        <cardinality xmi:id="_2l1RhyYKEeyuAeEDkgMLjw" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_2l1RiCYKEeyuAeEDkgMLjw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_2l1RiSYKEeyuAeEDkgMLjw" name="start">
+      <modelElement href="ConnectFour.uml#_2E-AISYKEeyuAeEDkgMLjw"/>
+      <stereotypes xmi:id="_2l1RiiYKEeyuAeEDkgMLjw" name="LegacyStyledElement">
+        <modelElement href="ConnectFour.uml#_2E-nMCYKEeyuAeEDkgMLjw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_2l1RiyYKEeyuAeEDkgMLjw" name="Annotations">
+        <modelElement href="ConnectFour.uml#_2FBDcCYKEeyuAeEDkgMLjw"/>
+      </stereotypes>
+      <visibility xmi:id="_2l1RjCYKEeyuAeEDkgMLjw" label="+"/>
+      <cardinality xmi:id="_2l1RjSYKEeyuAeEDkgMLjw" label="1" max="1" min="1"/>
+      <parameters xmi:id="_2l1RjiYKEeyuAeEDkgMLjw" name="primaryStage">
+        <modelElement href="ConnectFour.uml#_2E-AIiYKEeyuAeEDkgMLjw"/>
+        <cardinality xmi:id="_2l1RjyYKEeyuAeEDkgMLjw" label="1" max="1" min="1"/>
+        <type xmi:id="_2l1RkCYKEeyuAeEDkgMLjw" name="Stage">
+          <modelElement href="ConnectFour.uml#_2E02MCYKEeyuAeEDkgMLjw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_2nxLMCYKEeyuAeEDkgMLjw" name="Exception">
+    <modelElement href="ConnectFour.uml#_2E8K8iYKEeyuAeEDkgMLjw"/>
+    <visualProperties xmi:id="_2nxLMSYKEeyuAeEDkgMLjw" position="-103.0,61.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_2nxLMiYKEeyuAeEDkgMLjw" name="Reference">
+      <modelElement href="ConnectFour.uml#_2E-AICYKEeyuAeEDkgMLjw"/>
+    </stereotypes>
+    <visibility xmi:id="_2nxLMyYKEeyuAeEDkgMLjw" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_2n0OgCYKEeyuAeEDkgMLjw" name="MyTest">
+    <modelElement href="ConnectFour.uml#_2AkBQCYKEeyuAeEDkgMLjw"/>
+    <visualProperties xmi:id="_2n0OgSYKEeyuAeEDkgMLjw" position="329.0,49.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_2n0OgiYKEeyuAeEDkgMLjw" label="~"/>
+    <operations xmi:id="_2n0OgyYKEeyuAeEDkgMLjw" name="test">
+      <modelElement href="ConnectFour.uml#_2Ar9ECYKEeyuAeEDkgMLjw"/>
+      <stereotypes xmi:id="_2n0OhCYKEeyuAeEDkgMLjw" name="LegacyStyledElement">
+        <modelElement href="ConnectFour.uml#_2AuZUCYKEeyuAeEDkgMLjw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_2n0OhSYKEeyuAeEDkgMLjw" name="Annotations">
+        <modelElement href="ConnectFour.uml#_2AwOgCYKEeyuAeEDkgMLjw"/>
+      </stereotypes>
+      <visibility xmi:id="_2n0OhiYKEeyuAeEDkgMLjw" label="~"/>
+      <cardinality xmi:id="_2n0OhyYKEeyuAeEDkgMLjw" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Hs5gICYLEeyuAeEDkgMLjw" name="NewClass1">
+    <modelElement href="ConnectFour.uml#_Hs3D4CYLEeyuAeEDkgMLjw"/>
+    <visualProperties xmi:id="_Hs5gISYLEeyuAeEDkgMLjw" position="455.0,412.0" size="183.0,34.0"/>
+    <visibility xmi:id="_Hs5gIiYLEeyuAeEDkgMLjw" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
