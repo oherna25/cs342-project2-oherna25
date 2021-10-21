@@ -119,6 +119,9 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Hs3D4CYLEeyuAeEDkgMLjw" name="NewClass1"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QN1mcCYLEeyuAeEDkgMLjw" name="Gamestate">
+      <ownedOperation xmi:id="_oqzEkCYLEeyuAeEDkgMLjw" name="gameState"/>
+    </packagedElement>
     <profileApplication xmi:id="_1yJKwCYKEeyuAeEDkgMLjw">
       <eAnnotations xmi:id="_1yPRYCYKEeyuAeEDkgMLjw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>

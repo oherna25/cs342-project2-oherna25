@@ -65,4 +65,14 @@
     <visualProperties xmi:id="_Hs5gISYLEeyuAeEDkgMLjw" position="455.0,412.0" size="183.0,34.0"/>
     <visibility xmi:id="_Hs5gIiYLEeyuAeEDkgMLjw" label="+"/>
   </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_QN7GACYLEeyuAeEDkgMLjw" name="Gamestate">
+    <modelElement href="ConnectFour.uml#_QN1mcCYLEeyuAeEDkgMLjw"/>
+    <visualProperties xmi:id="_QN7GASYLEeyuAeEDkgMLjw" position="38.0,140.0" size="308.0,167.0"/>
+    <visibility xmi:id="_QN7GAiYLEeyuAeEDkgMLjw" label="+"/>
+    <operations xmi:id="_oq05wCYLEeyuAeEDkgMLjw" name="gameState">
+      <modelElement href="ConnectFour.uml#_oqzEkCYLEeyuAeEDkgMLjw"/>
+      <visibility xmi:id="_oq05wSYLEeyuAeEDkgMLjw" label="+"/>
+      <cardinality xmi:id="_oq05wiYLEeyuAeEDkgMLjw" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
