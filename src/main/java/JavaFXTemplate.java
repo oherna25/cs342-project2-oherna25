@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -7,6 +8,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -39,7 +41,7 @@ public class JavaFXTemplate extends Application {
 		
 		
 
-		MenuItem reverse = new MenuItem("Reverse reverse");
+		MenuItem reverse = new MenuItem("Reverse Move");
 		gamePlay.getItems().add(reverse);
 		
 		MenuItem theme1 = new MenuItem("Original Theme");
@@ -73,16 +75,22 @@ public class JavaFXTemplate extends Application {
 		
 		VBox main_screen = new VBox(20);
 		board = new Board();
-		board.setGridLinesVisible(true);
-		mainRoot = new VBox(200, menuBar, board);
-		
 	
+		for ( int i = 0; i < 7; i++) {
+			for (int j = 0; j < 6; j++ ) {
+				board.add(new gameButton(), i, j);
+			}
+		}
+		mainRoot = new VBox(200, menuBar, board);
+		mainRoot.setAlignment(Pos.CENTER);
 		
 		
-		Scene main_window = new Scene(mainRoot, 700,700, Color.BEIGE);
+		Scene main_window = new Scene(mainRoot, 700,700, Color.AQUA);
 		
 		primaryStage.setScene(main_window);
 		primaryStage.show();
 	}
+	
+	
 
 }
