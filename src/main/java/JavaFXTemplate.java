@@ -6,13 +6,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class JavaFXTemplate extends Application {
 	
 	Scene startup_screen ;
-	Group root;
+	Group main;
+	Board board;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
@@ -23,13 +27,39 @@ public class JavaFXTemplate extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Welcome to Connect Four!");
-		root = new Group();
+		
+		// main group for the scene with the board
+		main = new Group();
+
+		// creates menubar
 		MenuBar menuBar = new MenuBar();
 		Menu gamePlay = new Menu("Game Play");
-		menuBar.getMenus().add(gamePlay);
+		Menu themes = new Menu("Themes");
+		Menu options = new Menu("Options");
+		
+		
+
 		MenuItem reverse = new MenuItem("Reverse reverse");
 		gamePlay.getItems().add(reverse);
 		
+		MenuItem theme1 = new MenuItem("Original Theme");
+		MenuItem theme2 = new MenuItem("Cold war Theme");
+		MenuItem theme3 = new MenuItem("Weeb Theme");
+		themes.getItems().addAll(theme1, theme2, theme3);
+		
+		
+		MenuItem instructions = new MenuItem("How to play");
+		MenuItem newGame = new MenuItem("Start new game");
+		MenuItem exit = new MenuItem("exit");
+		options.getItems().addAll(instructions, newGame, exit);
+		
+		menuBar.getMenus().addAll(gamePlay, themes, options);
+		
+		
+		
+		
+		
+		VBox mainRoot;
 		VBox menu = new VBox(menuBar);
 		
 		
@@ -37,13 +67,21 @@ public class JavaFXTemplate extends Application {
 		Button start = new Button("start game");
 		VBox screen1 = new VBox(20);
 		screen1.getChildren().addAll(label1, start);
-		startup_screen = new Scene(menu, 700, 700);
 		
+		startup_screen = new Scene(menu ,700, 700);
+		startup_screen.setFill(Color.rgb(1,1,1));
 		
 		VBox main_screen = new VBox(20);
+		board = new Board();
+		board.setGridLinesVisible(true);
+		mainRoot = new VBox(200, menuBar, board);
 		
-		Scene main = new Scene(main_screen, 700,700);
-		primaryStage.setScene(startup_screen);
+	
+		
+		
+		Scene main_window = new Scene(mainRoot, 700,700, Color.BEIGE);
+		
+		primaryStage.setScene(main_window);
 		primaryStage.show();
 	}
 
