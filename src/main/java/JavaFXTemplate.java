@@ -1,15 +1,12 @@
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
@@ -21,16 +18,10 @@ public class JavaFXTemplate extends Application {
 	Scene startup_screen ;
 	Group main;
 	Board board;
-	int row;
-	int column;
-	Game game;
-	
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
-		
 	}
 
 	//feel free to remove the starter code from this method
@@ -41,7 +32,6 @@ public class JavaFXTemplate extends Application {
 		
 		// main group for the scene with the board
 		main = new Group();
-		game = new Game();
 
 		// creates menubar
 		MenuBar menuBar = new MenuBar();
@@ -83,30 +73,24 @@ public class JavaFXTemplate extends Application {
 		startup_screen = new Scene(menu ,700, 700);
 		startup_screen.setFill(Color.rgb(1,1,1));
 		
-		VBox main_screen = new VBox();
-		//main_screen.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
+		VBox main_screen = new VBox(20);
 		board = new Board();
 	
-
-		
-		
-		mainRoot = new VBox( menuBar, board);
-		mainRoot.setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
-		
+		for ( int i = 0; i < 7; i++) {
+			for (int j = 0; j < 6; j++ ) {
+				board.add(new gameButton(), i, j);
+			}
+		}
+		mainRoot = new VBox(200, menuBar, board);
 		mainRoot.setAlignment(Pos.CENTER);
 		
 		
-		
-		Scene main_window = new Scene(mainRoot, 700,700, Color.BLACK);
+		Scene main_window = new Scene(mainRoot, 700,700, Color.AQUA);
 		
 		primaryStage.setScene(main_window);
 		primaryStage.show();
 	}
 	
-
-	}
-	
-	
 	
 
-
+}
