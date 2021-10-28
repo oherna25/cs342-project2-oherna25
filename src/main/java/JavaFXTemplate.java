@@ -1,4 +1,7 @@
+
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -8,23 +11,40 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class JavaFXTemplate extends Application {
 	
 	Scene startup_screen ;
+	Scene coldWar;
 	Group main;
 	Board board;
 	int row;
 	int column;
-	Game game;
+	VBox coldwarCont;
+	Button start;
+	BackgroundImage sovietBG = new BackgroundImage ( new Image("sovietvusa.jpg", 700,700, false, true), BackgroundRepeat.REPEAT, 
+													BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+
+	VBox mainRoot;
+	//Game game;
 	
+	
+
 	
 	
 	public static void main(String[] args) {
@@ -40,8 +60,9 @@ public class JavaFXTemplate extends Application {
 		primaryStage.setTitle("Welcome to Connect Four!");
 		
 		// main group for the scene with the board
-		main = new Group();
-		game = new Game();
+
+		board = new Board();
+		//game = new Game();
 
 		// creates menubar
 		MenuBar menuBar = new MenuBar();
@@ -71,40 +92,53 @@ public class JavaFXTemplate extends Application {
 		
 		
 		
-		VBox mainRoot;
-		VBox menu = new VBox(menuBar);
+
 		
 		
 		Label label1 = new Label("Welcome screen");
-		Button start = new Button("start game");
-		VBox screen1 = new VBox(20);
-		screen1.getChildren().addAll(label1, start);
-		
-		startup_screen = new Scene(menu ,700, 700);
-		startup_screen.setFill(Color.rgb(1,1,1));
-		
-		VBox main_screen = new VBox();
-		//main_screen.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
-		board = new Board();
+		label1.setFont(new Font("Time new Roman", 20));
+		Label statusLabel = new Label(" ");
+		start = new Button("start game");
+		VBox screen1 = new VBox(label1, start);
+		screen1.setAlignment(Pos.CENTER);
+		//screen1.setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
+		startup_screen = new Scene(screen1, 700, 700);
 	
-
-		
 		
 		mainRoot = new VBox( menuBar, board);
 		mainRoot.setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
 		
 		mainRoot.setAlignment(Pos.CENTER);
+		coldwarCont = new VBox(menuBar, board, statusLabel);
+		coldwarCont.setBackground(new Background(sovietBG));
+		coldWar = new Scene(coldwarCont, 700,700);
 		
-		
-		
-		Scene main_window = new Scene(mainRoot, 700,700, Color.BLACK);
+		Scene main_window = new Scene(mainRoot, 700,700);
 		
 		primaryStage.setScene(main_window);
 		primaryStage.show();
-	}
 	
 
+		
+		start.setOnAction (new EventHandler<ActionEvent> () {
+			public void handle(ActionEvent e) {
+				primaryStage.setScene(main_window);
+			}
+			
+		});
+		
+		theme2.setOnAction(e -> {
+			primaryStage.setScene(coldWar);
+		});
+	
 	}
+}
+
+	
+
+	
+
+
 	
 	
 	

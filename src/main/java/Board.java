@@ -59,6 +59,9 @@ public class Board extends GridPane{
 		if (logic.checkwin()) {
 			System.out.println("won");
 		}
+		
+		} else {
+			
 		}
 	}
 	

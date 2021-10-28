@@ -39,6 +39,25 @@ public class gameLogic {
 			player2count = 0;
 			
 		}
+		
+		for ( int i = 0; i < 6; i++) {
+			for ( int j = 0; j < 7; j++) {
+				if(boardArray[j][i] == 1) {
+					player1count++;
+				}
+				if(boardArray[j][i] == 2) {
+					player2count++;
+				}
+			}
+			if (player1count == 4 || player2count == 4) {
+				return true;
+			}
+			player1count = 0;
+			player2count = 0;
+			
+		}
+		
+		
 		return false;
 	}
 	public boolean isValidMove(int col) {
